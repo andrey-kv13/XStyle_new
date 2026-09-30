@@ -64,6 +64,8 @@ python scripts/fetch_parquet_catalog.py
 1. В репозитории: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 2. После успешного workflow адрес: **https://andrey-kv13.github.io/XStyle_new/**
 
+   Если job `deploy` упал с *404 / Ensure GitHub Pages has been enabled* — сначала сохраните **Source: GitHub Actions** в Settings → Pages, затем **Re-run all jobs** в Actions (или сделайте новый push в `main`).
+
 Локальная проверка сборки под Pages (PowerShell):
 
 ```powershell
