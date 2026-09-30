@@ -57,7 +57,24 @@ python scripts/fetch_parquet_catalog.py
 
 ## Деплой
 
-Сборка статики/SSR через `npm run build`. Подходит для Vercel, Docker или любого Node-хостинга с поддержкой Next.js 16.
+### GitHub Pages
+
+Сайт публикуется автоматически при push в `main` (workflow `.github/workflows/github-pages.yml`).
+
+1. В репозитории: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. После успешного workflow адрес: **https://andrey-kv13.github.io/XStyle_new/**
+
+Локальная проверка сборки под Pages (PowerShell):
+
+```powershell
+$env:NEXT_PUBLIC_BASE_PATH="/XStyle_new"
+npm run build
+# статика в папке out/
+```
+
+Без `NEXT_PUBLIC_BASE_PATH` сборка подходит для обычного хостинга (`npm run start` после `build` не используется при `output: export` — отдавайте папку `out` или используйте `npx serve out`).
+
+### Node-хостинг
 
 Переменные окружения не обязательны; при необходимости создайте `.env.local` (файл в `.gitignore`).
 
