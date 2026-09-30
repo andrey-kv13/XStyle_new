@@ -1,0 +1,2 @@
+# Optional: refresh product JSON from x-stl.ru (Tilda Store API).
+# Usage: pip install -r requirements.txt && python fetch_doors_catalog.py
